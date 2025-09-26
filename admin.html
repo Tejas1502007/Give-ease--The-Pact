@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiveEase Admin Panel</title>
+    <link rel="stylesheet" href="style4.css"> <!-- Linking style4.css -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for graphs -->
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <h2>GiveEase Admin</h2>
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#donations">Donations</a></li>
+            <li><a href="#institutions">Institutions</a></li>
+            <li><a href="#users">Users</a></li>
+            <li><a href="#reports">Reports</a></li>
+            <li><a href="#settings">Settings</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <h1>Dashboard Overview</h1>
+        </header>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard">
+            <div class="stats">
+                <div class="card">
+                    <h3>Total Donations</h3>
+                    <p>₹15,78,892</p>
+                    <span>↑ 12.5% from last month</span>
+                </div>
+                <div class="card">
+                    <h3>Active Requests</h3>
+                    <p>47</p>
+                    <span>↔ No change</span>
+                </div>
+                <div class="card">
+                    <h3>Verified Institutions</h3>
+                    <p>128</p>
+                    <span>↑ 3 new this week</span>
+                </div>
+            </div>
+
+            <!-- Donation Trends Graph -->
+            <canvas id="donationChart"></canvas>
+        </section>
+
+        <!-- Donations Section -->
+        <section id="donations">
+            <h2>Recent Donations</h2>
+            <table>
+                <tr>
+                    <th>Donor Name</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Institution</th>
+                </tr>
+                <tr>
+                    <td>Rahul Sharma</td>
+                    <td>₹5000</td>
+                    <td>Feb 27, 2025</td>
+                    <td>Helping Hands</td>
+                </tr>
+                <tr>
+                    <td>Anjali Verma</td>
+                    <td>₹2500</td>
+                    <td>Feb 26, 2025</td>
+                    <td>Food for All</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Institutions Section -->
+        <section id="institutions">
+            <h2>Registered Institutions</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Govt. ID</th>
+                </tr>
+                <tr>
+                    <td>Helping Hands</td>
+                    <td>Delhi</td>
+                    <td>IN123456</td>
+                </tr>
+                <tr>
+                    <td>Food for All</td>
+                    <td>Mumbai</td>
+                    <td>IN654321</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Users Section -->
+        <section id="users">
+            <h2>Registered Users</h2>
+            <ul>
+                <li>Rahul Sharma - Donor</li>
+                <li>Anjali Verma - Donor</li>
+                <li>Helping Hands - Charity</li>
+            </ul>
+        </section>
+
+        <!-- Reports Section -->
+        <section id="reports">
+            <h2>Reports</h2>
+            <p>Download financial and operational reports here.</p>
+            <button>Download Report</button>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings">
+            <h2>Settings</h2>
+            <p>Manage admin account, notifications, and preferences.</p>
+        </section>
+    </div>
+
+    <!-- Chart.js Script for Graph -->
+    <script>
+        var ctx = document.getElementById('donationChart').getContext('2d');
+        var donationChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Donations (₹)',
+                    data: [50000, 65000, 75000, 72000, 82000, 89000],
+                    backgroundColor: 'rgba(54, 79, 199, 0.8)',
+                    borderColor: 'rgba(54, 79, 199, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

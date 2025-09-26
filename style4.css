@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #1e3a8a;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li:hover {
+    background-color: #2948b4;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 260px;
+    padding: 20px;
+    width: calc(100% - 260px);
+}
+
+.main-content header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Cards */
+.stats {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin: 0 0 10px;
+}
+
+.card p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+.card span {
+    font-size: 12px;
+    color: gray;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background: #1e3a8a;
+    color: white;
+}
+
+/* Chart */
+canvas {
+    margin-top: 20px;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Button */
+button {
+    background: #1e3a8a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #2948b4;
+}

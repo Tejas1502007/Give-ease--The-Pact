@@ -1,0 +1,119 @@
+/* Root Variables */
+:root {
+    --primary: #1A237E;
+    --button-blue: #007bff;
+    --button-green: #28a745;
+    --white: #ffffff;
+    --background: #f8f9fa;
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #aecaf0; /* Adjust color if needed */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo and Title */
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 40px; /* Adjust size */
+    margin-right: 10px;
+}
+
+.nav-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1D3A8A; /* Adjust to your theme color */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1D3A8A; /* Adjust hover color */
+}
+/* Tables */
+.donation-table, .summary-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background: white;
+}
+
+.donation-table th, .donation-table td,
+.summary-table th, .summary-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.donation-table th {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Buttons */
+.add-to-cart {
+    background-color: var(--button-blue);
+    color: var(--white);
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+.confirm-btn {
+    display: block;
+    width: 50%;
+    margin: auto;
+    padding: 12px;
+    background-color: var(--button-green);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirm-btn:hover {
+    background-color: #218838;
+}
+
+/* Dropdown */
+.dropdown {
+    padding: 8px;
+    border-radius: 5px;
+}
